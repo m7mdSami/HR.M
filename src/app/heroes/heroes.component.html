@@ -1,0 +1,28 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <mat-toolbar>Filters</mat-toolbar>
+        <div class="filters">
+            <app-filter></app-filter>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <!-- <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button> -->
+            <span>Heroes</span>
+            <div class="search">
+                <input placeholder="Search" class="search-input" (keyup)="search($event)">
+                <button mat-button (click)="drawer.toggle()">
+                    <mat-icon matSuffix>filter_alt</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar>
+        <!-- Add Content Here -->
+        <div class="container">
+            <app-users></app-users>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

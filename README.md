@@ -1,6 +1,10 @@
-# SaryHRM
+# Sary HR Management
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+
+## Tools and Technologies
+
+HTML, angular material, SCSS, Typescript, JS ES6+, Angular 11, akita, Json Server.
 
 ## Development server
 

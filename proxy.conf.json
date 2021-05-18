@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "http://localhost:3000"
+  },
+  "/Country": {
+    "target": "http://countryapi.gear.host/v1"
+  }
+}
