@@ -8,7 +8,7 @@ HTML, angular material, SCSS, Typescript, JS ES6+, Angular 11, akita, Json Serve
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
