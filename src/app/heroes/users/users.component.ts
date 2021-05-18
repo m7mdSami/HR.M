@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { Heroes } from '../../interfaces';
 import { HeroesService } from 'src/app/state/query';
+import { ActivatedRoute, Router, NavigationEnd  } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -21,12 +22,19 @@ export class UsersComponent implements OnInit {
 
   constructor(
     private service: Service,
-    private heroesService: HeroesService
+    private heroesService: HeroesService,
+    private route: ActivatedRoute
   ) { }
 
   async ngOnInit() {
     await this.getHeroes();
     await this.search();
+
+    let queryParams = this.route.snapshot.queryParams;
+    if(Object.keys(queryParams).length) {
+      this.heroesService.updateQueryParams(queryParams)
+      console.log(queryParams);
+    }
   }
 
   getHeroes() {

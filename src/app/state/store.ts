@@ -5,12 +5,14 @@ import { Heroes } from '../interfaces';
 export interface HeroesState {
     heroes: Heroes[];
     searchVal: string;
+    queryParams: {} | null
 }
 
 export function getInitialState(): HeroesState {
     return {
         heroes: [],
-        searchVal: ''
+        searchVal: '',
+        queryParams: {}
     };
 }
 
